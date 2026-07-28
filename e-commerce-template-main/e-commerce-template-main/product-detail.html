@@ -249,4 +249,25 @@ $(document).ready(function() {
 <!-- ========================= SECTION CONTENT END// ========================= -->
 
 </body>
+<script>
+    // Get the product ID from the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const productId = urlParams.get('id');
+
+    if (productId) {
+        // Fetch product details from Django API
+        fetch(`http://127.0.0.1:8080/api/products/${productId}/`)
+            .then(response => response.json())
+            .then(product => {
+                // Update the product details on the page
+                document.querySelector('.title').textContent = product.name;
+                document.querySelector('.price').textContent = `$${product.price}`;
+                document.querySelector('.img-big-wrap img').src = product.image || './images/items/12.jpg';
+                document.querySelector('.content-body p').textContent = product.description;
+            })
+            .catch(error => console.error('Error fetching product details:', error));
+    } else {
+        document.querySelector('.title').textContent = 'Product not found';
+    }
+</script>
 </html>
