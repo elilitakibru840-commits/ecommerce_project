@@ -164,11 +164,12 @@ $(document).ready(function() {
 		 					const productCard = `
 		 						<div class="col-md-3">
 		 							<figure class="card card-product-grid">
-		 								<div class="img-wrap">
-		 									<img src="${product.image}" alt="${product.name}">
-		 								</div>
-		 								<figcaption class="info-wrap">
-		 									<h6 class="title">${product.name}</h6>
+		 								
+		 									<a href="./product-detail.html?id=${product.id}"class="img-warp"><img src="${product.image}" alt="${product.name}">
+											</a>
+		 							
+		 								<figcaption class="info-wrap"> 
+		 									<a href="./product-detail.html?id=${product.id}" class="title">${product.name}</a>
 		 									<div class="price mt-1">$${product.price}</div>
 		 								</figcaption>
 		 							</figure>
