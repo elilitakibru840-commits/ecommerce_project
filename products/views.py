@@ -1,4 +1,4 @@
-from django.shortcuts import generics
+from rest_framework import generics
 from .models import Products
 from .serializers import ProductSerializer
 

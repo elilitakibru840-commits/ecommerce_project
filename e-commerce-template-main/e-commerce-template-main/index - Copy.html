@@ -149,57 +149,10 @@ $(document).ready(function() {
 	<a href="./store.html" class="btn btn-outline-primary float-right">See all</a>
 	<h3 class="section-title">Popular products</h3>
 </header><!-- sect-heading -->
- 
+
 	
-<div class="row" id="product-container">
- <!-- Products will be loaded here by JavaScript -->
-</div> <!-- row.// -->
-	<script>
-		 // Fetch products from Django API
-		 		fetch('http://127.0.0.1:8080/api/products/')
-		 			.then(response => response.json())
-		 			.then(products => {
-		 				const productContainer = document.getElementById('product-container');
-		 				products.forEach(product => {
-		 					const productCard = `
-		 						<div class="col-md-3">
-		 							<figure class="card card-product-grid">
-		 								<div class="img-wrap">
-		 									<img src="${product.image}" alt="${product.name}">
-		 								</div>
-		 								<figcaption class="info-wrap">
-		 									<h6 class="title">${product.name}</h6>
-		 									<div class="price mt-1">$${product.price}</div>
-		 								</figcaption>
-		 							</figure>
-		 						</div>`;
-		 					productContainer.innerHTML += productCard;
-		 				});
-		 			})
-		 			.catch(error => console.error('Error fetching products:', error));
-	</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<div class="row">
+	
 </div> <!-- row.// -->
 
 </div><!-- container // -->
