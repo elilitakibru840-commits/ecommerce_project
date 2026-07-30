@@ -1,3 +1,4 @@
+
 {% load static %}
 <!DOCTYPE HTML>
 <html lang="en">
@@ -155,11 +156,11 @@
                 const productCard = `
                     <div class="col-md-3">
                         <figure class="card card-product-grid">
-                            <a href="/product-detail.html?id=${product.id}" class="img-wrap">
+                            <a href="/product/${product.id}/" class="img-wrap">
                                 <img src="${product.image || '{% static 'images/items/default.jpg' %}'}" alt="${product.name}">
                             </a>
                             <figcaption class="info-wrap">
-                                <a href="/product-detail.html?id=${product.id}" class="title">${product.name}</a>
+                                <a href="/product/${product.id}/" class="title">${product.name}</a>
                                 <div class="price mt-1">$${product.price}</div>
                             </figcaption>
                         </figure>

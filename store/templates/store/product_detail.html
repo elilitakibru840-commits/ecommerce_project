@@ -1,0 +1,185 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="pragma" content="no-cache" />
+<meta http-equiv="cache-control" content="max-age=604800" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<title>Product Details - MyStore</title>
+
+<link href="{% static 'images/favicon.ico' %}" rel="shortcut icon" type="image/x-icon">
+<script src="{% static 'js/jquery-2.0.0.min.js' %}" type="text/javascript"></script>
+<script src="{% static 'js/bootstrap.bundle.min.js' %}" type="text/javascript"></script>
+<link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" type="text/css"/>
+<link href="{% static 'fonts/fontawesome/css/all.min.css' %}" type="text/css" rel="stylesheet">
+<link href="{% static 'css/ui.css' %}" rel="stylesheet" type="text/css"/>
+<link href="{% static 'css/responsive.css' %}" rel="stylesheet" media="only screen and (max-width: 1200px)" />
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<header class="section-header">
+<nav class="navbar p-md-0 navbar-expand-sm navbar-light border-bottom">
+<div class="container">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTop4">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarTop4">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"> Language </a>
+        <ul class="dropdown-menu small">
+          <li><a class="dropdown-item" href="#">English</a></li>
+          <li><a class="dropdown-item" href="#">Arabic</a></li>
+          <li><a class="dropdown-item" href="#">Russian </a></li>
+        </ul>
+      </li>
+      <li class="nav-item dropdown">
+        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"> USD </a>
+        <ul class="dropdown-menu small">
+          <li><a class="dropdown-item" href="#">EUR</a></li>
+          <li><a class="dropdown-item" href="#">AED</a></li>
+          <li><a class="dropdown-item" href="#">RUBL </a></li>
+        </ul>
+      </li>
+    </ul>
+    <ul class="navbar-nav">
+      <li><a href="#" class="nav-link"> <i class="fa fa-envelope"></i> Email </a></li>
+      <li><a href="#" class="nav-link"> <i class="fa fa-phone"></i> Call us </a></li>
+    </ul>
+  </div>
+</div>
+</nav>
+
+<section class="header-main border-bottom">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-2 col-md-3 col-6">
+        <a href="/" class="brand-wrap" style="font-size: 30px;">
+          My<span style="color: blue; font-weight: bold;">Store</span>
+        </a>
+      </div>
+      <div class="col-lg col-sm col-md col-6 flex-grow-0">
+        <div class="category-wrap dropdown d-inline-block float-right">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+            <i class="fa fa-bars"></i> All category
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Electronics</a>
+            <a class="dropdown-item" href="#">Clothing</a>
+            <a class="dropdown-item" href="#">Shoes</a>
+            <a class="dropdown-item" href="#">Accessories</a>
+          </div>
+        </div>
+      </div>
+      <a href="#" class="btn btn-outline-primary">Store</a>
+      <div class="col-lg col-md-6 col-sm-12 col">
+        <form action="#" class="search">
+          <div class="input-group w-100">
+            <input type="text" class="form-control" style="width:60%;" placeholder="Search">
+            <div class="input-group-append">
+              <button class="btn btn-primary" type="submit">
+                <i class="fa fa-search"></i>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-lg-3 col-sm-6 col-8 order-2 order-lg-3">
+        <div class="d-flex justify-content-end mb-3 mb-lg-0">
+          <div class="widget-header">
+            <small class="title text-muted">Welcome guest!</small>
+            <div>
+              <a href="#">Sign in</a> <span class="dark-transp"> | </span>
+              <a href="#"> Register</a>
+            </div>
+          </div>
+          <a href="#" class="widget-header pl-3 ml-3">
+            <div class="icon icon-sm rounded-circle border"><i class="fa fa-shopping-cart"></i></div>
+            <span class="badge badge-pill badge-danger notify">0</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</header>
+
+<!-- ===== PRODUCT DETAILS ===== -->
+<section class="section-content padding-y bg">
+<div class="container">
+<div class="card">
+  <div class="row no-gutters">
+    <aside class="col-md-6">
+      <article class="gallery-wrap">
+        <div class="img-big-wrap">
+          <a href="#"><img id="detail-image" src="{% static 'images/items/12.jpg' %}"></a>
+        </div>
+      </article>
+    </aside>
+    <main class="col-md-6 border-left">
+      <article class="content-body">
+        <h2 id="detail-name" class="title">Loading Product...</h2>
+        <div class="mb-3">
+          <var id="detail-price" class="price h4">$0.00</var>
+        </div>
+        <p id="detail-desc">Loading description...</p>
+        <hr>
+        <a href="#" class="btn btn-primary"> <span class="text">Add to cart</span> <i class="fas fa-shopping-cart"></i> </a>
+      </article>
+    </main>
+  </div>
+</div>
+</div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="section-footer border-top">
+  <div class="container">
+    <section class="footer-bottom border-top row">
+      <div class="col-md-2">
+        <p class="text-muted"> &copy; 2025 MyStore </p>
+      </div>
+      <div class="col-md-8 text-md-center">
+        <span class="px-2">info@mystore.com</span>
+        <span class="px-2">+1-800-555-1234</span>
+        <span class="px-2">123 Main Street</span>
+      </div>
+      <div class="col-md-2 text-md-right text-muted">
+        <i class="fab fa-lg fa-cc-visa"></i>
+        <i class="fab fa-lg fa-cc-paypal"></i>
+        <i class="fab fa-lg fa-cc-mastercard"></i>
+      </div>
+    </section>
+  </div>
+</footer>
+
+<!-- ===== JAVASCRIPT ===== -->
+<script>
+   
+    // Get the product ID from the URL (e.g., /product/1/)
+    const pathParts = window.location.pathname.split('/');
+    const productId = pathParts[pathParts.length - 2];
+
+    if (productId) {
+        // IMPORTANT: These MUST be backticks (`) NOT quotes (')
+        fetch(`http://127.0.0.1:8080/api/products/${productId}/`)
+            .then(response => response.json())
+            .then(product => {
+                document.getElementById('detail-name').textContent = product.name;
+                document.getElementById('detail-price').textContent = `$${product.price}`;
+                document.getElementById('detail-desc').textContent = product.description;
+                if (product.image) {
+                    document.getElementById('detail-image').src = product.image;
+                }
+            })
+            .catch(error => console.error('Error fetching product:', error));
+    } else {
+        document.getElementById('detail-name').textContent = 'Product not found';
+    }
+</script>
+
+</body>
+</html>
